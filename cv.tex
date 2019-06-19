@@ -1,0 +1,106 @@
+\documentclass[a4paper,10pt,notitlepage]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{titlesec}
+\usepackage{fullpage}
+\usepackage{parskip}
+\usepackage{pdfpages}
+%\usepackage{array}
+%\usepackage{tabularx}
+%\usepackage{booktabs}
+%\usepackage{siunitx}
+\usepackage{adjustbox}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{enumitem}
+\usepackage{pdfsync}
+\usepackage{helvet}
+\usepackage[a4paper,left=.4in,right=.4in,top=.4in,bottom=.4in]{geometry}
+\usepackage{lastpage}
+\usepackage{xcolor}
+\AtBeginDocument{\color{darkgray}}
+
+\definecolor{infoboxcolor}{gray}{.97}
+
+\definecolor{important}{HTML}{B30000}
+\newcommand{\important}[1]{\textbf{\textcolor{important}{#1}}}
+
+\usepackage[]{hyperref}
+\hypersetup{
+	pdftitle={Liam Lawrence},
+	pdfauthor={Liam Lawrence},
+	pdfsubject={CV for Liam Lawrence},
+	pdfkeywords={resumé, résumé, curriculum vitae, CV, experience, education, software,
+	engineer, developer, Linux, embedded, OpenCV, Altium, C, C++, Python},
+	pdfpagemode=UseOutlines,
+	breaklinks,
+	linktoc=all,
+	colorlinks=true,
+	urlcolor=darkgray,
+	linkcolor=darkgray,
+	citecolor=darkgray
+}
+
+\input{icons}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2em}
+\linespread{1.2}
+\renewcommand{\baselinestretch}{.9}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\setlist[itemize]{leftmargin=*,rightmargin=0pt}
+
+%\renewcommand{\bfdefault}{sb}
+
+\titleformat{\section}[hang]{\large\bfseries}{}{0pt}{\textsc}[\titlerule]
+\titlespacing{\section}{0pt}{0pt}{1em}
+\titleformat{\subsection}[hang]{\large\bfseries}{}{0pt}{\textsc}[\titlerule]
+\titlespacing{\subsection}{0pt}{0pt}{1em}
+
+\newcommand{\lcolsize}{.60\textwidth}
+\newcommand{\rcolsize}{.35\textwidth}
+
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{minipage}[t][1.8cm][c]{\lcolsize}
+	{\huge\textbf{Liam Lawrence}}\\[1.2em]
+	{\Large{Software Engineering Intern}}
+\end{minipage}%
+\hfill%
+\protect\begin{minipage}[t][1.8cm][c]{\rcolsize}
+	\begin{adjustbox}{max width=\textwidth}
+	\fcolorbox{black}{infoboxcolor}{
+		%\centering
+		\begin{tabular*}{\linewidth}{r|l}
+			\large{\fixedphonesymbol{}} & 
+			{\href{tel:+15403150217}{{+1}~{540}~{315}~{0217}}}\\
+			\large{\emailsymbol{}} &
+			{\href{mailto:liamrlawrence@gmail.com}{{{liamrlawrence}@gmail.com}}} \\
+			\large{\linkedinsymbol{}} &
+			{\href{https://www.linkedin.com/in/liamrlawrence}{{liamrlawrence}}} \\
+			\large{\githubsymbol{}} &
+			{\href{https://github.com/liamrlawrence}{{liamrlawrence}}} \\
+		\end{tabular*}
+	}
+	\end{adjustbox}
+\end{minipage}
+
+%\bigskip
+
+\begin{minipage}[t][][t]{\lcolsize}
+	\input{exp}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t][][t]{\rcolsize}
+	\input{skills}
+	\bigbreak
+	\input{edu}
+	\bigbreak
+	\input{awards}
+\end{minipage}
+\end{document}
